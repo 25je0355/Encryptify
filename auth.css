@@ -1,0 +1,108 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", system-ui, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background:
+    linear-gradient(rgba(8,10,20,0.9), rgba(8,10,20,0.9)),
+    url("../images/auth-grid-bg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #e5e7eb;
+}
+
+.auth-box {
+  width: 420px;              /* was 380px */
+  background: rgba(15, 18, 30, 0.92);
+  border-radius: 16px;
+  padding: 40px 36px;        /* MORE inner space */
+  border: 1px solid rgba(0, 255, 255, 0.15);
+  box-shadow:
+    0 0 30px rgba(0, 0, 0, 0.9),
+    inset 0 0 20px rgba(0, 255, 255, 0.05);
+}
+
+.auth-box h2 {
+  margin-bottom: 24px;       /* space below "Login" */
+  font-size: 24px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.auth-box input {
+  width: 100%;
+  padding: 12px 14px;
+  margin-bottom: 18px;       /* space between email & password */
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(10, 12, 22, 0.9);
+  color: #e5e7eb;
+  font-size: 14px;
+}
+
+.auth-box input::placeholder {
+  color: #9ca3af;
+}
+
+.auth-box input:focus {
+  outline: none;
+  border-color: #22d3ee;
+  box-shadow: 0 0 0 2px rgba(34, 211, 238, 0.2);
+}
+
+.auth-box .switch {
+  margin-top: 18px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.auth-box .switch a {
+  color: #22d3ee;
+  text-decoration: none;
+}
+
+.auth-box .switch a:hover {
+  text-decoration: underline;
+}
+
+/* Auth box button */
+.auth-box button {
+    width: 100%;
+    margin-top: 15px;
+
+    background-color: #0f1b24; /* SAME as auth box body */
+    color: #e6f1ff;
+
+    border: 1px solid #1f3b4d;
+    border-radius: 6px;
+
+    padding: 10px 0;
+    font-size: 15px;
+    cursor: pointer;
+
+    transition: 
+        background 0.3s ease,
+        box-shadow 0.3s ease,
+        transform 0.2s ease;
+}
+
+.auth-box button:hover {
+    background: linear-gradient(
+        135deg,
+        #00c6ff,
+        #0072ff,
+        #6a11cb
+    );
+
+    box-shadow: 0 0 12px rgba(0, 114, 255, 0.6);
+    transform: translateY(-1px);
+}
+

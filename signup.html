@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Sign Up | Encryptify</title>
+  <link rel="stylesheet" href="css/auth.css" />
+</head>
+<body>
+
+    <div class="auth-container">
+    <div class="auth-box">
+
+      <h2>Sign-Up to Encryptify</h2>
+
+      <!-- SIGNUP FORM -->
+      <input type="email" id="email" placeholder="Email" />
+      <input type="password" id="password" placeholder="Password" />
+      <input type="password" id="confirmPassword" placeholder="Confirm Password" />
+
+      <button id="signupBtn">Create Account</button>
+
+      <!-- MFA SECTION -->
+      <div id="mfaSection" style="display:none; margin-top:15px;">
+        <p>Scan this QR code in Google Authenticator</p>
+        <img id="qrImage" style="width:180px; margin:10px auto; display:block;" />
+
+        <input
+          type="text"
+          id="mfaCode"
+          placeholder="Enter 6-digit code"
+        />
+
+        <button id="verifyMfaBtn">Verify MFA</button>
+      </div>
+
+      <!-- SUCCESS MESSAGE -->
+      <p id="successMsg" style="display:none; margin-top:15px;">
+        Account created successfully.
+        <a href="auth.html">Proceed to Login</a>
+      </p>
+
+    </div>
+  </div>
+
+  <script src="js/signup.js"></script>
+
+  
+</body>
+</html>
+

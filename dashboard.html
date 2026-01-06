@@ -1,0 +1,75 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+  <meta charset="UTF-8" /> 
+  <title>Encryptify | Dashboard</title> 
+  <link rel="stylesheet" 
+href="/mywebsite/css/dashboard.css" /> 
+</head> 
+<body> 
+  
+  <!-- Header  -->
+  <header class="dashboard-header"> 
+    <h1>Dashboard</h1> 
+    
+    <!-- PASSWORD CONFIRM MODAL --> 
+    <div id="passwordModal" class="modal"> 
+      <div class="modal-box"> 
+        <h2>Confirm Password</h2> 
+        <p>This is required to encrypt & decrypt your files.</p> 
+        <input 
+        type="password" 
+        id="cryptoPassword" 
+        placeholder="Enter your password"/>
+        <button id="confirmPasswordBtn">Confirm</button> 
+      </div> 
+    </div> 
+    
+    <!-- USER MENU --> 
+     <div class="user-menu"> 
+      <button id="userBtn" class="icon-btn">👤</button> 
+      <div id="userDropdown" class="dropdown hidden"> 
+        <p id="userEmail">user@email.com</p> 
+        <button id="logoutBtn" class="danger-btn">Logout</button> 
+      </div> 
+    </div> 
+  </header> 
+  
+  <!-- MAIN CONTENT --> 
+  <main class="dashboard-main"> 
+    
+    <!-- UPLOAD BAR --> 
+    <div class="upload-bar"> 
+      <label class="attach-btn"> 
+        Attach file 
+        <input type="file" id="fileInput" hidden /> 
+      </label> 
+      
+      <span id="filePlaceholder">Please upload your file here</span>
+
+      <button id="uploadBtn" class="primary-btn">Encrypt & Upload</button> 
+    </div> 
+    
+    <!-- FILE LIST --> 
+     
+    <h2 class="section-title">Your Files</h2> 
+    
+    <div id="fileList" class="file-list"> 
+      
+      <!-- files rendered by dashboard.js --> 
+    </div> 
+  
+  </main> 
+  
+  <!-- PREVIEW MODAL --> 
+  <div id="previewModal" class="preview-modal"> 
+    <div class="preview-box"> 
+      <span class="close-preview" onclick="document.getElementById('previewModal').style.display='none'" >✕</span> 
+      <div id="previewContent"></div> 
+    </div> 
+  </div> 
+  
+  <script src="js/dashboard.js"></script> 
+</body> 
+</html>
+

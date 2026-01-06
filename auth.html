@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Encryptify | Login</title>
+  <link rel="stylesheet" href="css/auth.css">
+</head>
+<body>
+
+  <div class="auth-box">
+    <h2>Login to Encryptify</h2>
+
+    <input type="email" id="loginEmail" placeholder="Email" required>
+    <input type="password" id="loginPassword" placeholder="Password" required>
+
+    <!-- MFA INPUT (hidden by default, does NOT affect UI)
+    <input type="text" id="mfaToken" placeholder="Enter 6-digit MFA code" style="display:none;"> -->
+
+
+    <button id="loginBtn" class="login-btn">Login</button>
+
+    <!-- MFA SECTION (HIDDEN INITIALLY) -->
+        <div id="mfaSection" style="display:none; margin-top:15px;">
+            <p>Enter 6-digit MFA code</p>
+            <input type="text" id="mfaCode" placeholder="123456" />
+            <button id="verifyMfaBtn">Verify & Login</button>
+        </div>
+
+
+
+    <p class="switch">
+      Don’t have an account yet?
+      <a href="signup.html">Sign up</a>
+    </p>
+  </div>
+    <script src="./js/auth(1).js"></script>
+
+</body>
+</html>
